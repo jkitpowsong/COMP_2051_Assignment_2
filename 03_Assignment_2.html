@@ -1,0 +1,54 @@
+<html>
+	<head>
+	<title>Assignment 2-3</title>
+	<!-- QUESTION 3 : (Nested Control Statement) A college offers a course that prepares students for the state licensing exam for real estate brokers. Last year, several of the students who completed this course took the licensing exam. Naturally, the college wants to know how well its students performed. You have been asked to write a program to summarize the results. You have been given a list of these 10 students. Next to each name is written a 1 if the student passed the exam and a 2 if the student failed. Your program should analyze the results of the exam as follows:
+
+
+	a. Input each test result (i.e., a 1 or a 2). Display the message “Enter result” on the screen each time the program requests another test result.
+	b. Count the number of test results of each type.
+	c. Display a summary of the test results indicating the number of students who passed and the number of students who failed.
+	d. If more than eight students passed the exam, print the message “Raise tuition.”-->
+
+	<script type="text/javascript">
+	function exResult ()
+		{
+       	var passes = 0; // number of passes    
+			var failures = 0; // number of failures
+			var student = 1; // student counter    
+			var result; // one exam result         
+
+         	 // process 10 students; counter-controlled loop
+            while ( student <= 10 )
+            {
+               result = prompt( "Enter result (1=passed,2=failed)", "0" );
+
+               if ( result == "1" )  
+               {     
+                  passes = passes + 1;
+               }
+
+               else 
+               {                      
+                  failures = failures + 1;
+               }
+
+               student = student + 1;
+            } 
+
+            document.write( "<h1>Exam Results</h1>" );
+            document.write(
+               "Passed: " + passes + "<br />Failed: " + failures );
+
+            if ( passes > 8 ) 
+            {                           
+               document.write( "<br />Raise Tuition" );
+            }
+		}
+	</script>
+	</head>
+	<body>
+		<h3>Analysis of Exam Result</h3>
+		<input type="button" id ="" value="Exam Result" onclick="exResult()" />
+	</body>
+
+</html>
