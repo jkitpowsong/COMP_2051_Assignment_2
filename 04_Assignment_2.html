@@ -1,0 +1,37 @@
+<html>
+	<head>
+	<title>Assignment 2-5</title>
+	<!-- QUESTION 5 : Write a script that calculates the product of the odd integers from 1 to 15 then outputs HTML text that displays the results.-->
+
+	<script type="text/javascript">
+
+			var intcount;
+			var i;
+			var small=0;
+			var calculator;
+			intcount = prompt("Enter number of inputs");
+			var count = parseInt(intcount);
+			var myarray= new Array(count);
+			for(i=0;i<count;i++)
+			{
+				myarray[i]= prompt("Enter any integer:");
+			}
+			
+			calculator=myarray[0];
+			for(i=0;i<count;i++)
+			{
+				if(parseInt(myarray[i])< calculator)
+				calculator= myarray[i];
+
+			}
+
+
+	document.write( "<h1> Smallest of all input numbers is: " + calculator + "</h1>" );
+	</script>
+	</head>
+
+
+	<body>
+		
+
+</html>
