@@ -1,0 +1,70 @@
+<html>
+	<head>
+	<title>Assignment 2-6</title>
+	<!-- QUESTION 6 : Write a script that outputs XHTML to display the given patterns separately, one below the other. Use for statements to generate the patterns. All asterisks (*) should be printed by a single statement of the form document.write( "*" ); (this causes the asterisks to print side by side). A statement of the form document.writeln( "<br />" ); can be used to position to the next line. A statement of the form
+	document.write( " " ); can be used to display a space (needed for the last two patterns). There should be no other output statements in the program. [Hint: The last two patterns require that each line begin with an appropriate number of blanks. You may need to use the XHTML <pre></pre> tags.]-->
+
+	<script type="text/javascript">
+		var row; 
+		var col; 
+		var space;
+
+		document.write("<pre>");
+
+		//Part A
+		for (row = 1; row <= 10; row++)
+		{
+			for (col = 1; col <= row; col++)
+			{
+				document.write("*");
+		document.write();
+			}
+		}
+		
+		//Part B
+			for (row = 1; row <= 10; row - 1)
+		{
+			for (col = 1; col <= row; col++)
+			{
+				document.write("*");
+		document.write();
+			}
+		}
+
+		//Part C
+		for (row = 10; row >= 1; row-1)
+		{
+			for (space = 1; space <= row; space = space - 1)
+			
+				document.write(" ");
+
+			for (col = 1; col <= row; col++)
+				document.write("*");
+
+			document.write();
+		}
+
+
+		//Part D
+		for (row = 10; row >= 1; row-1)
+		{
+			for (space = 1; space < row; space++)
+			
+				document.write(" ");
+
+			for (col = 10; col >= row; col = col -1)
+				document.write("*");
+
+			document.write();
+		}
+		document.write("</pre>");
+			
+	</script>
+	</head>
+
+
+	<body>
+	</body>
+		
+
+</html>
