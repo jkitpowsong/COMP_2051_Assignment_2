@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<title>Assignment 2-9 </title>
+	<!-- QUESTION 9 : Develop a script that will determine the gross pay for each of three employees. The company pays “straight time” for the first 40 hours worked by each employee and pays “time and a half” for all hours worked in excess of 40 hours. You’re given a list of the employees of the company, the number of hours each employee worked last week, and the hourly rate of each employee. Your script should input this information for each employee, determine the employee’s gross pay and output HTML5 text that displays the employee’s gross pay. Use prompt dialogs to input the data. Some sample data:-->
+
+	<script type="text/javascript">
+	var name = prompt( "Please enter your name", "");
+	var hours = 40;
+	var OT = 10;
+	 
+	var hourlywage = "20";
+	var grossPay = hours + OT + hourlywage;
+	 
+	 
+	 
+	for(var i=0; i<hours.length; i++) {
+	num = parseInt( prompt( "how many of item "+(i+1),"0"));
+	if(!isNaN(num)) accumulator += items[i]*num;
+	}
+	{
+	num = parseInt( prompt( "how many hours you have worked this week? "+(i+1),"0"));
+	num = parseInt( prompt( "how many overtime hours you have worked this week "+(i+1),"0"));
+	document.write("The gross pay of employee is: " + grossPay);
+	}
+	</script>
+	</head>
+
+
+	<body>
+	</body>
+		
+
+</html>
