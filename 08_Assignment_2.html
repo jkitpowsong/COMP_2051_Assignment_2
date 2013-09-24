@@ -1,0 +1,57 @@
+<html>
+	<head>
+	<title>Assignment 2-8 </title>
+	<!-- QUESTION 8 : A large company pays its salespeople on a commission basis. The salespeople receive $200 per week, plus 9 percent of their gross sales for the week. For example, a salesperson who sells $5000 worth of merchandise in a week receives $200 plus 9 percent of $5,000, or a total of $650. You have been supplied with a list of the items sold by each salesperson. The value of these items are as follows: Develop a script that inputs one salesperson’s items sold for last week, calculates the salesperson’s earnings, and outputs HTML5 text that displays the salesperson’s earnings.-->
+	<style type="text/css">
+	h1 
+	{
+		font-family: Arial;
+	}
+
+	</style>
+
+	<script type="text/javascript">
+
+	function calculator ()
+	{
+		var itemcount;
+		var i;
+		var sum=0;
+		var cal;
+		itemcount = prompt("How many item/items Salesman sale last week:");
+		var count = parseInt(itemcount);
+		for(i=0;i<count;i++)
+	{
+		cal = prompt("Enter item number:");
+		var getprice = parseInt(cal);
+		if(getprice == 1)
+		{
+		sum = sum + 239.99;
+		}
+		else if(getprice == 2)
+		{
+		sum = sum + 129.75;
+		}
+		else if(getprice == 3)
+		{
+		sum = sum + 99.95;
+		}
+		else if(getprice == 4)
+		{
+		sum = sum + 350.89;
+		}
+		
+	}
+	var sal= 200 + (( 9 / 100)* parseInt(sum));
+	document.write( "<h1> Total Salary for this salesperson is: " + sal + "</h1>" );
+	}
+
+	</script>
+	</head>
+
+
+	<body>
+		<input type="button" value="Click here to run the program" onclick="calculator()">
+	</body>
+
+</html>
