@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>Assignment 2-10 </title>
+	<!-- QUESTION 10 : The process of finding the largest value (i.e. the maximum of a group of values) is used frequently in computer applications. For example, a script that determines the winner of a sales contest would input the number of units sold by each salesperson. The salesperson who sells the most units wins the content. Write a script that inputs a series of 10 single-digit numbers as characters {eg. 6, 7, 3, 6, 4, 2, 5, -7, 1, 2} determines the largest of the numbers, and outputs a message that displays the largest number.
+	Your script should use three variables: counter, number (the current digit input to the script, largest (the largest number found so far). Note that you can also change the program to be sentinel controlled to end whenever the user specifies, dealing with an unspecified data range.-->
+
+	<script type="text/javascript">
+	var counter;
+	var number;
+	var largestNum = 0;
+
+  counter = 0;
+  while ( counter < 10 )
+  {
+  number = prompt( "Please enter a single digit number" );
+
+  if ( number > largestNum )
+	largestNum = number;
+  counter++;
+	} 
+
+	alert( "Largest number you have entered is : " + largestNum );
+	
+	</script>
+	</head>
+
+
+	<body>
+	</body>
+		
+
+</html>
