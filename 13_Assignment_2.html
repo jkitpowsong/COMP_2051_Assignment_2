@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>Assignment 2-13 </title>
+	<!-- QUESTION 13 : A palindrome is a number or a text phrase that reads the same backward and forward. For example, each of the following five-digit integers is a palindrome: 12321, 55555, 45554, 11611. Write a script that reads in a five-digit integer and determines whether it’s a palindrome. If the number is not five digits long, display an alert dialog indicating the problem to the user. Allow the user to enter a new value after dismissing the alert dialogue. [hint: try using both division and remainder operations to “pick-off” each digit]-->
+
+	<script type="text/javascript">
+	function Palindrome() 
+	{
+	   var reverseStr = "";
+	   var str = document.getElementById("str").value;
+	   var i = str.length;
+	   for(var j=i; j>=0; j--) {
+	      reverseStr = reverseStr+str.charAt(j);
+	   }
+	   if(str == reverseStr) {
+	      alert(str+" is Palindrome");
+	   } else {
+	      alert(str+" is not a Palindrome");
+	   }
+	}
+	</script>
+	</head>
+
+	<body>
+		<form >
+  		Enter a String/Number: <input type="text" id="str" name="string" /><br />
+  		<input type="submit" value="Check" onclick="Palindrome();"/>
+		</form>
+	</body>
+		
+
+</html>
