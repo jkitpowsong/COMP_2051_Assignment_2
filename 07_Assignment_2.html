@@ -1,0 +1,46 @@
+<html>
+	<head>
+	<title>Assignment 2-7</title>
+	<!-- QUESTION 7 : Drivers are concerned with the mileage obtained by their automobiles. One driver has kept track of several tankfuls of gasolie by recording the number of miles driven and the number of gallons used for each thankful. Develop a script that will take as input the miles driven and gallons used (both as integers), for each thankful. The script should calculate and output HTML5 text that displays the number of miles per gallon obtained for each thankful and prints the combined number of miles per gallon obtained for all tankfuls up to this point. Use prompt dialogs to obtain the data from the users. Use your own made-up data to solve the problem. -->
+
+	<style type="text/css">
+		h1, body
+		{
+			font-family: Arial;
+			color: #5f6062;
+		}
+	</style>
+	<script type="text/javascript">
+		var gallon1;
+		var mile1;
+		var avg1;
+		var avg2;
+		var avg3;
+		var gallon2;
+		var mile2;
+		var gallon3;
+		var mile3;
+		var averageAll;
+		gallon1 = prompt("Enter Number of Gallons used for Tank1:");
+		mile1 = prompt("Enter number of miles drived for Tank1:");
+		gallon2 = prompt("Enter Number of Gallons used for Tank2:");
+		mile2 = prompt("Enter number of miles drived for Tank2:");
+		gallon3 = prompt("Enter Number of Gallons used for Tank3:");
+		mile3 = prompt("Enter number of miles drived for Tank3:");
+		avg1 = parseInt(mile1) / parseInt(gallon1);
+		avg2 = parseInt(mile2) / parseInt(gallon2);
+		avg3 = parseInt(mile3) / parseInt(gallon3);
+		averageAll = ((parseInt(mile1) + parseInt(mile2) + parseInt(mile3)) / (parseInt(gallon1) + parseInt(gallon2) + parseInt(gallon3)));
+		document.write( "<h1> Miles per Gallon for Tank1 is: " + avg1 + "</h1>" );
+		document.write( "<h1> Miles per Gallon for Tank2 is: " + avg2 + "</h1>" );
+		document.write( "<h1> Miles per Gallon for Tank3 is: " + avg3 + "</h1>" );
+		document.write( "<h1> Combined Miles per Gallon for all Tank is: " + averageAll + "</h1>" );
+	</script>
+	</head>
+
+
+	<body>
+		
+	</body>
+
+</html>
