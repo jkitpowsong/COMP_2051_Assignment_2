@@ -1,0 +1,73 @@
+<html>
+	<head>
+	<title>Assignment 2-12 </title>
+	<!-- QUESTION 12 : A company wants to transmit data over the telephone, but it is concerned that its phones may be tapped. All of its data is transmitted as four-digit integers. It has asked you to write a program that will encrypt its data so that the data may be transmitted more securely. Your script should read a four-digit integer entered by the user in a prompt dialog and encrypt it as follows: Replace each digit by (the sum of that digit plus 7) modulus 10. Then swap the first digit with the third, and swap the second digit with the fourth. Then output text that displays the encrypted integer. Once this is done, write a program that inputs an encrypted four-digit integer and decrypts it to form the original number.-->
+
+	<script type="text/javascript">
+	
+
+	function EncryptNumber()
+	{
+		var digit1;
+		var digit2;
+		var digit3;
+		var digit4;
+		var inputString;
+
+		// Ask user to enter 4 digit to be encrypted
+		inputString = prompt("Please enter a 4 digit number");
+
+		var number = parseInt(inputString);
+
+		digit1 = parseInt((number / 1000 + 7) % 10);
+		digit2 = parseInt((number % 1000 / 100 + 7) % 10);
+		digit3 = parseInt((number % 1000 % 100 / 10 + 7) % 10);
+		digit4 = parseInt((number % 1000 % 100 / 10 + 7) % 10);
+
+		var encryptedNum;
+		encryptedNum = "The encrypted number is " + digit1 + digit2 + digit3 + digit4;
+
+		document.write("<br>" + encryptedNum);
+
+	}
+
+	function DecryptNumber()
+	{
+		var inputString;
+
+		inputString = prompt("Please enter a 4 digit number");
+
+		var number = inputString;
+		var digit1;
+		var digit2;
+		var digit3;
+		var digit4;
+
+		digit1 = parseInt(number / 1000);
+		digit2 = parseInt(number % 1000 / 100);
+		digit3 = parseInt(number % 1000 % 100 / 10);
+		digit3 = parseInt(number % 1000 % 100 % 10);
+		
+		var temp = parseInt((digit1 + 3) % 10);
+		digit1 = parseInt((digit3 + 3) % 10);
+		digit3 = temp;
+		temp = parseInt((digit2 + 3) % 10);
+		digit2 = parseInt((digit4 + 3) % 10);
+		digit4 = temp;
+		
+		var decryptedNumber = digit1 * 1000 + digit2 * 100 + digit3 * 10 + digit4;
+		document.write("The decrypted number is" + decryptedNumber ;
+	}
+
+	</script>
+	</head>
+
+
+	<body>
+		<input type="button" value="Encrypt number" onclick="EncryptNumber()">
+
+		<input type="button" value="Decrypt number" onclick="DecryptNumber()">
+	</body>
+		
+
+</html>
