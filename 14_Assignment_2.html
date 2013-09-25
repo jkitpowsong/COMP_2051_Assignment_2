@@ -2,19 +2,43 @@
 	<head>
 	<title>Assignment 2-14 </title>
 	<!-- QUESTION 14 : A person invests $1000.00 in a savings account yielding 5 percent interest. Assuming that all the interest is left on deposit, calculate and print the amount of money in the account at the end of each year for 10 years. Use the following formula to determine the amounts:
-	
 	a. a = p * (1 + r)n where p is the original amount invested (i.e., the principal), r is the annual interest rate, n is the number of years, a is the amount on deposit at the end of the nth year.
-	
 	b. Create a program which puts the value of the amount on deposit every year for the next 10 years, as well as the count of the year, in a table.-->
 
+	<style type="text/css">
+		table
+		{
+			text-align: center;
+			font-family: Arial;
+		}
+	</style>
+	
 	<script type="text/javascript">
+
+		var amount;
+		var principal = 1000;
+		var rate = 0.05;
+
+		document.write("<table border = \"1\">");
+		document.write("<thead><tr><th>Year</th>");
+		document.write("<th>Deposit amount</th>");
+		document.write("</tr></thead><tbody>");
+
+		for (var year = 1; year <= 10; ++year)
+		{
+			amount = principal * Math.pow(1.0 + rate, year);
+			document.write("<tr><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>");
+		}
+
+		document.write("</tbody></table>");
+
+
 	
 	</script>
 	</head>
 
+
 	<body>
-		
-	</body>
 		
 
 </html>
